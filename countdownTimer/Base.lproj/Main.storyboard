@@ -22,14 +22,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <datePicker alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="10" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kh-rZ-rcM">
-                                <rect key="frame" x="0.0" y="87" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99079340670000005" green="1" blue="0.47340984310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <date key="date" timeIntervalSinceReferenceDate="570969017.86439097">
-                                    <!--2019-02-04 10:30:17 +0000-->
-                                </date>
-                            </datePicker>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="春節時刻" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YVH-Qw-dKz">
                                 <rect key="frame" x="135" y="120" width="150.5" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -317,6 +309,7 @@
                         <outlet property="hour" destination="l48-pn-gue" id="ho6-ae-lAC"/>
                         <outlet property="mins" destination="tYK-P2-GgI" id="M3S-HB-AOB"/>
                         <outlet property="nowDate" destination="o2A-Da-SRH" id="MzO-gi-yiB"/>
+                        <outlet property="runButton" destination="JGY-rc-At0" id="jqq-wt-TfR"/>
                         <outlet property="sec" destination="KaM-6g-TKQ" id="ZJO-7o-dNV"/>
                         <outlet property="sendButton" destination="QmC-JR-OmZ" id="k6J-Uu-yPx"/>
                     </connections>

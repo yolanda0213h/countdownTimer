@@ -22,11 +22,14 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var nowDate: UILabel!
     @IBOutlet weak var datePicher: UIDatePicker!
     @IBOutlet weak var sendButton: UIButton!
-    func timeSche(repeats: Bool, runtime: TimeInterval){
+    @IBOutlet weak var runButton: UIButton!
+    func doomsFunc() {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let doomsTime = datePicher.date
         let doomsLabel = formatter.string(from: doomsTime)
         doomsButton.setTitle(doomsLabel, for: UIControl.State.normal)
+    }
+    func timeSche(repeats: Bool, runtime: TimeInterval){
         timerSche = Timer.scheduledTimer(withTimeInterval: runtime, repeats: repeats, block: { (_) in
             let nowTime = Date()
             let doomsTime = self.datePicher.date
@@ -45,30 +48,27 @@ class SecondViewController: UIViewController {
             let nowTime = Date()
             let time = self.formatter.string(from: nowTime)
             self.nowDate.text = time
-            
         })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         timemove()
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     @IBAction func funcDooms(_ sender: UIButton) {
         sendButton.isHidden = false
         datePicher.isHidden = false
         closeView.isHidden = false
+        
     }
     @IBAction func funcButton(_ sender: UIButton) {
         sendButton.isHidden = true
         datePicher.isHidden = true
         closeView.isHidden = true
         timemove()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let doomsTime = datePicher.date
-        let doomsLabel = formatter.string(from: doomsTime)
-        doomsButton.setTitle(doomsLabel, for: UIControl.State.normal)
+        doomsFunc()
+        
     }
     @IBAction func funcDatePicher(_ sender: UIDatePicker) {
       sender.minimumDate = Date()
